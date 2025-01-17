@@ -139,6 +139,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Ennemy.cpp" />
+    <ClCompile Include="EnnemyManager.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="SDonjon.cpp" />
     <ClCompile Include="Entity.cpp" />

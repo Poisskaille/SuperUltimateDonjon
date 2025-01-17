@@ -6,8 +6,10 @@
 class EnnemyManager {
 private:
 
-	vector<Ennemy>AllEnnemy;
+	vector<Ennemy*>AllEnnemy;
 
 public:
+
+	void AddEnnemy();
 
 };
