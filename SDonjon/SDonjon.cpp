@@ -1,12 +1,16 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "Player.h"
 
 using namespace std;
 using namespace sf;
 
 int main() {
 
-    RenderWindow window(VideoMode(1000, 1000), "Super Donjon",);
+    Player joueur(3, 11);
+
+    RenderWindow window(VideoMode(1600, 900), "Super Donjon");
+    window.setFramerateLimit(60);
 
     while (window.isOpen()) {
         Event event;
@@ -15,10 +19,12 @@ int main() {
                 window.close(); 
         }
 
-
+        joueur.Update(5);
         window.clear();
+
+        joueur.Draw(window);
+
         window.display();
     }
-
     return 0;
 }

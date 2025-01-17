@@ -138,7 +138,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Ennemy.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="SDonjon.cpp" />
+    <ClCompile Include="Entity.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Chasing.h" />
+    <ClInclude Include="Ennemy.h" />
+    <ClInclude Include="EnnemyManager.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="Patrol.h" />
+    <ClInclude Include="Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
