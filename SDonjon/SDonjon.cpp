@@ -1,16 +1,23 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "Player.h"
+#include "EnnemyManager.h"
+
+EnnemyManager manager;
 
 using namespace std;
 using namespace sf;
 
-int main() {
+Player joueur(3, 2);
 
-    Player joueur(3, 11);
+int main() {
+    srand(time(NULL));
 
     RenderWindow window(VideoMode(1600, 900), "Super Donjon");
     window.setFramerateLimit(60);
+
+    manager.AddPatrol(2, &joueur);
+    manager.AddChasing(2,&joueur);
 
     while (window.isOpen()) {
         Event event;
@@ -23,7 +30,9 @@ int main() {
         window.clear();
 
         joueur.Draw(window);
-
+        manager.UpdateAll();
+        manager.DisplayAll(window);
+        
         window.display();
     }
     return 0;

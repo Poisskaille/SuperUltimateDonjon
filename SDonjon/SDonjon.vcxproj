@@ -138,8 +138,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Chasing.cpp" />
     <ClCompile Include="Ennemy.cpp" />
     <ClCompile Include="EnnemyManager.cpp" />
+    <ClCompile Include="Patrol.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="SDonjon.cpp" />
     <ClCompile Include="Entity.cpp" />

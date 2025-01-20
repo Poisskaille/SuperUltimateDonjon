@@ -19,6 +19,11 @@ public:
 
 	void Update(float dT)override;
 	void Draw(sf::RenderWindow& window)override;
+	void HandleInput(float dT);
+
 	void SetSpeed(float x);
+
+	int getHp();
+	void setHp(int x);
 
 };

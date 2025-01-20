@@ -1,10 +1,26 @@
 #pragma once
 #include "Ennemy.h"
 
-class Patrol : public Entity {
+class Patrol : public Ennemy {
 private:
-
+	int speed;
+	CircleShape bodyennemy;
+	Player* p;
 public:
-	void Update(float dT) override = 0;
-	void Draw(RenderWindow& window) override = 0;
+
+	Clock delay;
+	
+	Patrol(int s, Player* _p) : speed(s), p(_p) {
+		bodyennemy.setRadius(20);
+		bodyennemy.setFillColor(Color::Red);
+		bodyennemy.setPosition((rand() % 900), (rand() % 500));
+	}
+
+	~Patrol(){}
+
+	void Update(float dT)override;
+	void Draw(RenderWindow& window) override;
+	
+	void Move();
+	void CheckCollision();
 };

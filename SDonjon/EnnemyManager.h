@@ -5,11 +5,14 @@
 
 class EnnemyManager {
 private:
-
-	vector<Ennemy*>AllEnnemy;
+	Clock clock;
+	vector<unique_ptr<Ennemy>>AllEnnemy;
 
 public:
 
-	void AddEnnemy();
+	void AddPatrol(int nb, Player* p);
+	void AddChasing(int nb, Player* p);
+	void DisplayAll(RenderWindow& window);
+	void UpdateAll();
 
 };
